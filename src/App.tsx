@@ -1,5 +1,6 @@
 import React from "react";
 import { AddFilamentForm } from "./components/AddFilamentForm";
+import { FilamentInventoryTiles } from "./components/FilamentInventoryFiles";
 
 function App() {
   return (
@@ -9,9 +10,15 @@ function App() {
         <p className="text-xl pb-1 mb-1">Manage your inventory and track material usage.</p>
       </header>
 
-      <section>
-        <AddFilamentForm/>
-      </section>
+      <div className="grid grid-cols-1 lg:grid-cols-3 items-start">
+        <section className="lg:col-span-1">
+          <AddFilamentForm/>
+        </section>
+        <section className="lg:col-span-2">
+          <FilamentInventoryTiles/>
+        </section>
+      </div>
+      
     </div>
   );
 }
